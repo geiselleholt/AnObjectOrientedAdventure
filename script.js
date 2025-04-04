@@ -42,6 +42,9 @@ class Character {
     const result = Math.floor(Math.random() * 20) + 1 + mod;
     console.log(`${this.name} rolled a ${result}.`);
   }
+  static maxHealth() {
+    maxHealth(100);
+  }
 }
 
 const robin = new Adventurer("Robin");
@@ -69,6 +72,13 @@ class Adventurer extends Character {
   scout() {
     console.log(`${this.name} is scouting ahead...`);
     super.roll();
+  }
+  static roles() {
+    roles = ["Fighter", "Healer", "Wizard"];
+
+    if (!roles.includes(role)) {
+      console.log(`Invalid role`);
+    }
   }
 }
 
